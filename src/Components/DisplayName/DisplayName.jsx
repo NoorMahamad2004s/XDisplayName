@@ -35,10 +35,14 @@ const DisplayName = () => {
                         <button type="submit">Submit</button>
                     </div>
                     
-                        {fullName && firstName && lastName && <p>Full Name: {fullName}</p>}
+                    
+                    {fullName && firstName && lastName && <label id='fullname'>Full Name: {fullName}</label>}
                     
                 </fieldset>
             </form>
+
+           
+
         </div>
     )
 }
