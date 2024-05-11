@@ -41,8 +41,9 @@ const DisplayName = () => {
                 </fieldset>
             </form>
 
+        <div className="fullname">
             {fullName && firstName && lastName && <p id='fullname'>Full Name: {fullName}</p>}
-
+            </div>
         </div>
     )
 }
