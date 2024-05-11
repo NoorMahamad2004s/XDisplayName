@@ -9,18 +9,20 @@
         const[firstName, setFirstName] = useState('');
         const[lastName, setLastName] = useState('');
         const[fullName, setFullName] = useState('');
-        const[error, setError] = useState('');
+        // const[error, setError] = useState('');
 
         const handleSubmit = (e)=>{
             e.preventDefault();
-            if (!firstName.trim() || !lastName.trim()) {
-                setError('Please fill out both first name and last name fields.');
-            } else {
-                setError('');
-                setFullName(`${firstName} ${lastName}`);
-            }
+            // if (!firstName.trim() || !lastName.trim()) {
+            //     setError('Please fill out both first name and last name fields.');
+            // } else {
+            //     setError('');
+            //     setFullName(`${firstName} ${lastName}`);
+            // }
+            setFullName(`${firstName} ${lastName}`);
         }
 
+        
 
         return(
             <div className='formContainer'>
@@ -55,7 +57,7 @@
 
             <div className="fullName">
 
-                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
                 {fullName && <p>Full Name: {fullName}</p>}
 
             </div>   
