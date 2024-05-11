@@ -36,12 +36,12 @@ const DisplayName = () => {
                     </div>
                     
                     
-                    {fullName && firstName && lastName && <label id='fullname'>Full Name: {fullName}</label>}
+                    
                     
                 </fieldset>
             </form>
 
-           
+            {fullName && firstName && lastName && <p id='fullname'>Full Name: {fullName}</p>}
 
         </div>
     )
