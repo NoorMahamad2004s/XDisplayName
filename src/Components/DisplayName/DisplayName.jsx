@@ -9,17 +9,18 @@
         const[firstName, setFirstName] = useState('');
         const[lastName, setLastName] = useState('');
         const[fullName, setFullName] = useState('');
-        // const[error, setError] = useState('');
+        const[error, setError] = useState('');
 
         const handleSubmit = (e)=>{
             e.preventDefault();
-            // if (!firstName.trim() || !lastName.trim()) {
-            //     setError('Please fill out both first name and last name fields.');
-            // } else {
-            //     setError('');
-            //     setFullName(`${firstName} ${lastName}`);
-            // }
-            setFullName(`${firstName} ${lastName}`);
+            if (!firstName.trim() || !lastName.trim()) {
+                setError('Please fill out both first name and last name fields.');
+                setFullName('')
+            } else {
+                setError('');
+                setFullName(`${firstName} ${lastName}`);
+            }
+            // setFullName(`${firstName} ${lastName}`);
         }
 
         
@@ -37,14 +38,14 @@
                     <h3>Full Name Display</h3>
                 <div className="firstName">
                     <label>First Name: 
-                        <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)} required />
+                        <input type="text" value={firstName} onChange={(e)=>setFirstName(e.target.value)}  />
                 </label>
                     </div>
 
                     <div className="lastName">
 
                     <label>Last Name: 
-                        <input  type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} required/>
+                        <input  type="text" value={lastName} onChange={(e)=>setLastName(e.target.value)} />
                     </label>
                     </div>
 
@@ -57,8 +58,8 @@
 
             <div className="fullName">
 
-                {/* {error && <p style={{ color: 'red' }}>{error}</p>} */}
-                {fullName && <p>Full Name: {fullName}</p>}
+                {error && <p style={{ color: 'red' }}>{error}</p>}
+                {fullName ? <p>Full Name: {fullName}</p> : ""}
 
             </div>   
 
