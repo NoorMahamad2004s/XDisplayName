@@ -34,9 +34,9 @@ const DisplayName = () => {
                     <div className="btn">
                         <button type="submit">Submit</button>
                     </div>
-                    <div className="fullName">
+                    
                         {fullName && firstName && lastName && <p>Full Name: {fullName}</p>}
-                    </div>
+                    
                 </fieldset>
             </form>
         </div>
