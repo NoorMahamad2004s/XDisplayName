@@ -1,0 +1,19 @@
+
+.formContainer{
+    width: 30%;
+    height: 40%;
+}
+
+.firstName{
+    margin-bottom: 10px;
+}
+
+.lastName{
+    margin-bottom: 15px;
+}
+
+.fullName{
+    margin-top: 5px;
+    border: 1px solid black;
+    padding-left: 10px;
+}
