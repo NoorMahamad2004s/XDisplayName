@@ -32,7 +32,7 @@
             if (fullName !== '' && (firstName === '' || lastName === '')) {
                 setFullName('');
             }
-        }, [firstName, lastName]);
+        }, [handleSubmit]);
         
 
         return(
